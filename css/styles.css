@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,700');
+
+html, body {
+    height: 100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    background: linear-gradient(to bottom,#667db6, #0082c8, #0082c8, #667db6);
+}
+
+.container {
+    height: 200px;
+    width: 500px;
+    position:absolute;
+    top:-100%;
+    left: 50%;
+    transform:translateX(-50%);
+    animation: geek-tools-slide-in 2s ease-in forwards;
+}
+
+.eye-left {
+    height: 10px;
+    width:10px;
+    background-color:#000;
+    position:absolute;
+    left:calc(56% + (1% * .8));
+    top:26%;
+    animation:wink .5s linear 2.5s forwards;
+    margin:0;
+    padding:0;
+
+}
+
+.eye-right {
+    height: 10px;
+    width:10px;
+    background-color:#000;
+    position:absolute;
+    left:calc(65% + (1% * .1));
+    top:26%;
+    margin:0;
+    padding:0;
+    animation:wink .5s linear 2.5s forwards;
+
+}
+
+
+@keyframes geek-tools-slide-in {
+    0% {
+        top:-100%;
+        left: 50%;
+        transform:translateX(-50%);
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%);
+    }
+}
+@keyframes wink {
+    0%{
+        height:10px
+    }
+    50%{
+        height:2px;
+    }
+    100%{
+        height:10px;
+    }
+}
+
+
